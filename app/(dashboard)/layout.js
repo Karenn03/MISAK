@@ -6,7 +6,7 @@ export default function RootLayout({ children }) {
         <>
             <NavbarDashboard />
             <Sidebar />
-            <main className="pt-[90px] ml-20 sm:ml-80 p-6">
+            <main className="pt-[105px] ml-20 sm:ml-80 p-10">
                 {children}
             </main>
         </>
