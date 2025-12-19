@@ -48,7 +48,7 @@ const Sidebar = () => {
             icon: <Icon icon="vaadin:cash" width="24" height="24" />,
         },
         {
-            href: "/module6",
+            href: "/sst",
             name: "Seguridad y salud en el trabajo",
             icon: <Icon icon="ix:helmet-safety" width="24" height="24" />,
         },
@@ -109,7 +109,7 @@ const Sidebar = () => {
             <div className="flex-1 overflow-y-auto">
                 <ul className="px-2 sm:px-7 font-medium text-sm flex-1 text-neutral-800">
                     {navigation.map((item, idx) => {
-                        const isActive = pathname === item.href;
+                        const isActive = pathname === item.href || pathname.startsWith(item.href + "/");
                         if (item.children) {
                             return (
                                 <li key={idx} className="my-3">
