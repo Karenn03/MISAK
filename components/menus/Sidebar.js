@@ -109,7 +109,15 @@ const Sidebar = () => {
             <div className="flex-1 overflow-y-auto">
                 <ul className="px-2 sm:px-7 font-medium text-sm flex-1 text-neutral-800">
                     {navigation.map((item, idx) => {
-                        const isActive = pathname === item.href || pathname.startsWith(item.href + "/");
+                        const hasChildrenActive = item.children?.some((child) =>
+                            pathname.startsWith(child.href)
+                        );
+
+                        const isActive =
+                            pathname === item.href ||
+                            pathname.startsWith(item.href + "/") ||
+                            hasChildrenActive;
+
                         if (item.children) {
                             return (
                                 <li key={idx} className="my-3">
@@ -129,7 +137,7 @@ const Sidebar = () => {
                                     {openDropdown === item.name && (
                                         <ul className="ml-6 mt-2 space-y-1 transition-all duration-200 ease-in-out">
                                             {item.children.map((child, idx2) => {
-                                                const isChildActive = pathname === child.href;
+                                                const isChildActive = pathname.startsWith(child.href);
                                                 return (
                                                     <li key={idx2}>
                                                         <Link
