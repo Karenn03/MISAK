@@ -12,6 +12,7 @@
     "@fortawesome/fontawesome-free": "^7.1.0",
     "@heroui/react": "^2.8.6",
     "@iconify/react": "^6.0.2",
+    "flowbite-react": "^0.12.14",
     "next": "16.0.4",
     "react": "19.2.0",
     "react-dom": "19.2.0"

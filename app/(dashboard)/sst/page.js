@@ -14,12 +14,20 @@ const Module6 = () => {
                     <p className="text-[28px] text-[#262626] mb-6">
                         Aquí podrás resolver tus dudas sobre Seguridad y Salud en el Trabajo
                     </p>
-                    <button className="flex items-center gap-2 bg-[#57B627] text-white px-5 py-2 rounded-2xl hover:bg-[#2E7D00] transition">
-                        <Link href="/sst/chatbot" className="flex items-center gap-2">
-                            Comenzar
-                            <Icon icon="material-symbols:play-arrow" width="20" height="20" />
-                        </Link>
-                    </button>
+                    <div className="flex flex-row gap-6">
+                        <button className="flex items-center gap-2 border-2 border-[#57B627] text-lime-600 px-5 py-2 rounded-2xl hover:bg-[#E1F2DB] transition">
+                            <Link href="/sst/training" className="flex items-center gap-2">
+                                <Icon icon="hugeicons:ai-brain-04" width="20" height="20" />
+                                Entrenar
+                            </Link>
+                        </button>
+                        <button className="flex items-center gap-2 bg-[#57B627] text-white px-5 py-2 rounded-2xl hover:bg-[#2E7D00] transition">
+                            <Link href="/sst/chatbot" className="flex items-center gap-2">
+                                Comenzar
+                                <Icon icon="bi:play-fill" width="20" height="20" />
+                            </Link>
+                        </button>
+                    </div>
                 </div>
             </div>
             <div className="flex-1 flex justify-center">
