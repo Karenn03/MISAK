@@ -1,6 +1,6 @@
 import { Icon } from "@iconify/react";
 
-export default function SearchBar({ placeholder }) {
+export default function SearchBar({ placeholder, value, onChange }) {
     return (
         <div className="flex items-center gap-2 p-2.5 rounded-[10px] font-work-sans border border-[#262626]/50 w-full">
             <Icon
@@ -12,6 +12,8 @@ export default function SearchBar({ placeholder }) {
             <input
                 type="text"
                 placeholder={placeholder}
+                value={value}
+                onChange={onChange}
                 className="w-full outline-none text-[12px] sm:text-sm placeholder-[#262626]/50"
             />
         </div>
