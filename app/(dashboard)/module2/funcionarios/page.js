@@ -13,13 +13,13 @@ const Funcionarios = () => {
     ];
 
     const data = [
-        { codigo: "202010", denominacion: "Profesional", grado: "G10" },
-        { codigo: "202009", denominacion: "Profesional", grado: "G09" },
-        { codigo: "202008", denominacion: "Profesional", grado: "G08" },
-        { codigo: "202007", denominacion: "Profesional", grado: "G07" },
-        { codigo: "202006", denominacion: "Profesional", grado: "G06" },
-        { codigo: "202005", denominacion: "Profesional", grado: "G05" },
-        { codigo: "202004", denominacion: "Profesional", grado: "G04" },
+        { documento: "C.C. 51465363", nombre: "Adrian Montesinos", tipoContratacion: "Planta", telefono: "3101465654", correoElectronico: "adrian@sena.edu.co" },
+        { documento: "C.C. 36516514", nombre: "Valeria Casal", tipoContratacion: "Planta", telefono: "3125465458", correoElectronico: "valeria@sena.edu.co" },
+        { documento: "C.C. 25261651", nombre: "Julián Echeverría", tipoContratacion: "Contratista", telefono: "3145848569", correoElectronico: "julian@sena.edu.co" },
+        { documento: "C.C. 98547584", nombre: "Beatriz Rocha", tipoContratacion: "Contratista", telefono: "3004585448", correoElectronico: "beatriz@sena.edu.co" },
+        { documento: "C.C. 13256174", nombre: "Mateo Villalobos", tipoContratacion: "Planta", telefono: "3024584547", correoElectronico: "mateo@sena.edu.co" },
+        { documento: "C.C. 1465469", nombre: "Elena Santibáñez", tipoContratacion: "Contratista", telefono: "3154656958", correoElectronico: "elena@sena.edu.co" },
+        { documento: "C.C. 56946936", nombre: "Ricardo Falcón", tipoContratacion: "Planta", telefono: "3145614695", correoElectronico: "ricardo@sena.edu.co" },
     ];
 
     const actions = [
@@ -44,17 +44,17 @@ const Funcionarios = () => {
         <>
             <Header title="Provisión de talento humano" items={breadcrumbItems} />
             <div className="flex flex-col gap-3">
-                <SearchBar placeholder="Buscar por código o nombre" />
+                <SearchBar placeholder="Buscar por documento o nombre" />
                 <div className="self-end">
-                    <ActionButton text="Nuevo cargo" />
+                    <ActionButton text="Nuevo funcionario" />
                 </div>
                 <Table
-                    title="Productos"
-                    description="Desde esta sección puede gestionar los productos disponibles: crear, actualizar o eliminar según sea necesario."
                     columns={[
-                        { label: "Código", field: "codigo" },
-                        { label: "Denominación", field: "denominacion" },
-                        { label: "Grado", field: "grado" },
+                        { label: "Documento", field: "documento" },
+                        { label: "Nombre", field: "nombre" },
+                        { label: "Tipo de contratación", field: "tipoContratacion" },
+                        { label: "Teléfono", field: "telefono" },
+                        { label: "Correo electrónico", field: "correoElectronico" },
                     ]}
                     data={data}
                     actions={actions}

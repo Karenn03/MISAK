@@ -105,7 +105,7 @@ const Sidebar = () => {
     ];
 
     return (
-        <nav className="fixed top-10 left-0 pt-14 h-full bg-gray-50 flex flex-col w-20 sm:w-84 font-work-sans">
+        <nav className="fixed top-10 left-0 pt-12 h-full bg-gray-50 flex flex-col w-20 sm:w-84 font-work-sans">
             <div className="flex-1 overflow-y-auto">
                 <ul className="px-2 sm:px-7 font-medium text-sm flex-1 text-neutral-800">
                     {navigation.map((item, idx) => {

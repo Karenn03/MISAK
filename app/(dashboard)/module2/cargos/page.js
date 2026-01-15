@@ -44,13 +44,11 @@ const Cargos = () => {
         <>
             <Header title="Provisión de talento humano" items={breadcrumbItems} />
             <div className="flex flex-col gap-3">
-                <SearchBar placeholder="Buscar por código o nombre" />
+                <SearchBar placeholder="Buscar por código o denominación" />
                 <div className="self-end">
                     <ActionButton text="Nuevo cargo" />
                 </div>
                 <Table
-                    title="Productos"
-                    description="Desde esta sección puede gestionar los productos disponibles: crear, actualizar o eliminar según sea necesario."
                     columns={[
                         { label: "Código", field: "codigo" },
                         { label: "Denominación", field: "denominacion" },
