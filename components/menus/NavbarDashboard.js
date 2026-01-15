@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import logo from "@/public/img/logoSenaBlanco.png";
+import imagotipo from "@/public/img/ImagotipoBlanco.png";
 
 export default function NavbarDashboard() {
     const [state, setState] = useState(false);
@@ -48,7 +48,7 @@ export default function NavbarDashboard() {
                 <div className="items-center gap-x-10 px-4 max-w-8xl mx-auto md:flex md:px-8 font-work-sans">
                     <div className="flex items-center justify-between py-2 md:py-4 md:block">
                         <Link href="/home">
-                            <Image src={logo} className="h-12 w-12" alt="SENA Logo" />
+                            <Image src={imagotipo} className="h-8 w-auto" alt="SENA Logo" />
                         </Link>
                     </div>
                     <div

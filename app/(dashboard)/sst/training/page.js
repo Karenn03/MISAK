@@ -27,11 +27,11 @@ const Training = () => {
         try {
             setLoading(true);
             const response = await fetch(`${API_BASE_URL}/documents`);
-            
+
             if (!response.ok) {
                 throw new Error("Error al cargar documentos");
             }
-            
+
             const data = await response.json();
             setDocuments(data.documents || []);
         } catch (error) {
@@ -59,7 +59,7 @@ const Training = () => {
 
         try {
             setUploading(true);
-            
+
             const formData = new FormData();
             formData.append("file", file);
 
@@ -73,12 +73,11 @@ const Training = () => {
             if (!response.ok) {
                 throw new Error(result.detail || "Error al subir el archivo");
             }
-
             alert(result.message || "PDF subido e indexado correctamente");
-            
+
             // Recargar la lista de documentos
             await fetchDocuments();
-            
+
         } catch (error) {
             console.error("Error uploading file:", error);
             alert(error.message || "Error al subir el archivo");
@@ -110,10 +109,10 @@ const Training = () => {
             }
 
             alert(result.message || "Documento eliminado correctamente");
-            
+
             // Recargar la lista de documentos
             await fetchDocuments();
-            
+
         } catch (error) {
             console.error("Error deleting file:", error);
             alert(error.message || "Error al eliminar el archivo");
@@ -142,14 +141,14 @@ const Training = () => {
         <>
             <Header title="Provisión de talento humano" items={breadcrumbItems} />
             <div className="flex flex-col gap-3">
-                <SearchBar 
-                    placeholder="Buscar por nombre de archivo" 
+                <SearchBar
+                    placeholder="Buscar por nombre de archivo"
                     value={searchTerm}
                     onChange={(e) => setSearchTerm(e.target.value)}
                 />
                 <div className="self-end">
-                    <UploadButton 
-                        text={uploading ? "Subiendo..." : "Subir PDF"} 
+                    <UploadButton
+                        text={uploading ? "Subiendo..." : "Subir PDF"}
                         onFileSelect={handleUpload}
                         disabled={uploading}
                     />
